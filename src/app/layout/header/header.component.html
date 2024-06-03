@@ -1,0 +1,44 @@
+<nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]='this.scrollY > 0'>
+    <div class="container">
+        <a class="navbar-brand text-light" routerLink="/">
+            <img src='assets/images/logo.png' width='25' />
+        </a>
+        <app-navbar></app-navbar>
+        <div class="menu-wrapper">
+            <div [class.animate]='responsiveMenuVisible' (click)='responsiveMenuVisible = !responsiveMenuVisible' class="hamburger-menu"></div>
+        </div>
+        <div class="menu-responsive" [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }">
+            <!-- <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.scrollY > 0' class="on-top">
+                <nav>
+                    <ol>
+                        <li>
+                            <a (click)='scroll("about")'>
+                                <span>01. </span> {{"Header.Item1"}}
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)='scroll("jobs")'>
+                                <span>02. </span> {{"Header.Item2"}}
+                            </a>
+                        </li>
+                        <li>
+                          <a (click)='scroll("proyects")'>
+                              <span>03. </span> {{"Header.Item3"}}
+                          </a>
+                      </li>
+                      <li>
+                        <a (click)='scroll("proyects")'>
+                            <span>04. </span> {{"Header.Item4"}}
+                        </a>
+                      </li>
+                      <li>
+                          <a class="main-btn cv-btn">
+                            {{"Header.cvBtn"}}
+                          </a>
+                      </li>
+                    </ol>
+                </nav>
+            </aside> -->
+        </div>
+    </div>
+</nav>
