@@ -1,0 +1,14 @@
+.menu-ul {
+    app-navbar-item {
+        margin: 0px 13px;
+    }
+
+    // First and Last li has no margin
+    app-navbar-item:first-child {
+        margin-left: 0px;
+    }
+
+    app-navbar-item:last-child {
+        margin-right: 0px;
+    }
+}

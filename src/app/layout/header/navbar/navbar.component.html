@@ -1,0 +1,26 @@
+<ul ngbNav #nav="ngbNav" class="menu-ul">
+    @for (item of navbarItems; track item.name) {
+        <app-navbar-item [name]="item.name"></app-navbar-item>
+    }
+    <!-- <li ngbNavItem>
+        <a ngbNavLink ><span class='nav-number'>01. </span> <span class="underline nav-text"> {{"Header.Item1"}}</span></a>
+        <ng-template ngbNavContent>First content</ng-template>
+    </li>
+    <li ngbNavItem>
+        <a ngbNavLink ><span class='nav-number'>02. </span> <span class="underline nav-text"> {{"Header.Item2"}}</span></a>
+        <ng-template ngbNavContent>Second content</ng-template>
+    </li>
+    <li ngbNavItem>
+        <a ngbNavLink ><span class='nav-number'>03. </span> <span class="underline nav-text"> {{"Header.Item3"}}</span></a>
+        <ng-template ngbNavContent>Second content</ng-template>
+    </li>
+    <li ngbNavItem>
+        <a ngbNavLink ><span class='nav-number'>04. </span> <span class="underline nav-text"> {{"Header.Item4"}}</span></a>
+        <ng-template ngbNavContent>Second content</ng-template>
+    </li>
+    <li ngbNavItem>
+        <a  class="main-btn cv-btn" ngbNavLink>
+          {{"Header.cvBtn"}}
+        </a>
+    </li> -->
+</ul>
