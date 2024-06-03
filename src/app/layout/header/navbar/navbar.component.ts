@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router'
 import { NgbNav, NgbNavItem } from '@ng-bootstrap/ng-bootstrap'
 import { NavbarItemComponent } from './navbar-item/navbar-item.component'
 
@@ -12,16 +11,16 @@ import { NavbarItemComponent } from './navbar-item/navbar-item.component'
 })
 export class NavbarComponent {
   navbarItems = [{
-    name: 'Home',
+    name: 'Header.Item1',
     route: '/home',
   }, {
-    name: 'About',
+    name: 'Header.Item2',
     route: '/about'
   }, {
-    name: 'Projects',
+    name: 'Header.Item3',
     route: '/projects'
   }, {
-    name: 'Contact',
+    name: 'Header.Item4',
     route: '/contact'
   }]
 }

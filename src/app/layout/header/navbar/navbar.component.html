@@ -1,6 +1,6 @@
-<ul ngbNav #nav="ngbNav" class="menu-ul">
-    @for (item of navbarItems; track item.name) {
-        <app-navbar-item [name]="item.name"></app-navbar-item>
+<ul ngbNav #nav="ngbNav" class="collapse navbar-collapse column-gap-4">
+    @for (item of navbarItems; track item.name; let index = $index) {
+        <app-navbar-item [name]="item.name" [index]="index + 1"></app-navbar-item>
     }
     <!-- <li ngbNavItem>
         <a ngbNavLink ><span class='nav-number'>01. </span> <span class="underline nav-text"> {{"Header.Item1"}}</span></a>
