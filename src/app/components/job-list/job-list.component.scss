@@ -1,0 +1,44 @@
+@import "variables";
+
+.nav-tabs {
+    border: none;
+    
+    li {
+        border-left: 2px solid $LightestNavy;
+        border-left-width: 2px;
+        border-left-style: solid;
+        border-left-color: $LightestNavy;
+    
+        a {
+            cursor: pointer;
+            padding: .875rem 1.5rem;
+            transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+            font-family: $font-family-code;
+            font-size: .75rem;
+            color: $body-color;
+
+            &.active{
+                background-color: $LightNavy;
+                color: $secondary;
+                border-color: transparent;
+                border-radius: 0px;
+            }
+
+            &:hover{
+                background-color: $LightNavy;
+                color: $secondary;
+                border-color: transparent;
+                border-radius: 0px;
+            }
+        }
+    }
+}
+
+p {
+    &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: $secondary;
+    }
+}

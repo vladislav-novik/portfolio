@@ -1,0 +1,25 @@
+<div class="mt-4 d-flex column-gap-4" data-aos="fade-up" data-aos-duration="1000">
+    <ul
+        ngbNav
+        #nav="ngbNav"
+        [(activeId)]="active"
+        orientation="vertical"
+        class="nav-tabs mt-0"
+    >
+    @for (job of 'Experience.Jobs' | translate; track job.Tab; let idx = $index) {
+        <li [title]="job.Tab" [ngbNavItem]="idx">
+            <a ngbNavLink>{{ job.Tab }}</a>
+            <ng-template ngbNavContent>
+                <h4 class="m-0 fs-4 text-light fw-medium">
+                    {{ job.Title }} | <span class="text-secondary">{{ job.Tab }}</span>
+                </h4>
+                <h5 class="m-0 mb-4 text-body font-code fs-sm fw-normal tracking-wide">{{ job.Date }}</h5>
+                @for (jobDescriptionParagraph of job.Description; track jobDescriptionParagraph) {
+                    <p class="fs-5 my-2 ps-4 position-relative" [innerHTML]="jobDescriptionParagraph | translate"></p>
+                }
+            </ng-template>
+        </li>
+    }
+    </ul>
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>
