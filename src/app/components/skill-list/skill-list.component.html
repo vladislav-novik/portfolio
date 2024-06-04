@@ -1,0 +1,5 @@
+<ul class="grid p-0" style="--bs-columns: 2; --bs-gap: .5rem .5rem;" data-aos="fade-up">
+    @for (skill of skills; track skill) {
+        <app-skill [title]="skill"></app-skill>
+    }
+</ul>

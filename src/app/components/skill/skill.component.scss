@@ -1,0 +1,7 @@
+li {
+    &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+    }
+}
