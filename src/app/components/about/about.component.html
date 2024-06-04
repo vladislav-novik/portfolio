@@ -1,35 +1,17 @@
-<section class="section about" id='about'>
-    <div class="container">
-        <div class="section-box">
-            <div class="about-title" data-aos="fade-up">
-                <h3 class="section-title">
-                    <span class='n-section-title'>01.</span> {{"AboutMe.Title" | translate}}
-                </h3>
+<section id='about' class="min-vh-100 d-flex align-items-center">
+    <div class="container h-100">
+        <app-section-title [index]="1" [title]="'AboutMe.Title' | translate"></app-section-title>
+        <div class="grid gy-5 gx-5">
+            <div class="g-col-12 g-col-md-6 mw-lg">
+                @for (text of "AboutMe.Paragraphs" | translate; track text) {
+                    <p [innerHTML]="text" data-aos="fade-up" data-aos-duration="1000"></p>   
+                }
+                <app-skill-list></app-skill-list>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-6 mb-4 mb-md-0">
-                    <div class="about-description">
-                        @for (text of "AboutMe.Paragraphs" | translate; track text) {
-                            <p [innerHTML]="text" data-aos="fade-up" data-aos-duration="1000"></p>   
-                        }
-                        <ul class="skills-list" data-aos="fade-up">
-                            <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Angular </span></li>
-                            <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">RxJS </span></li>
-                            <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">HTML &amp; (S)CSS </span></li>
-                            <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Laravel </span></li>
-                            <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Express </span></li>
-                            <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">WordPress </span></li>
-                            <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">Jasmine / Karma (TDD) </span></li>
-                            <li class="skill-element" data-aos="fade-up" data-aos-duration="1000"><span class="underline">CI / CD </span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 mt-4 mt-md-0 text-center" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="about-img-container">
-                        <img class="rounded" width="400" height="300" src="assets/images/me4.jpg" alt="José Andrés">
-                    </div>
-                </div>
-
+            <div class="g-col-12 g-col-md-6 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <!-- <div class="about-img-container">
+                    <img class="rounded" width="400" height="300" src="assets/images/me4.jpg" alt="José Andrés">
+                </div> -->
             </div>
         </div>
     </div>
