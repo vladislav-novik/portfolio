@@ -50,9 +50,6 @@ importers:
       '@popperjs/core':
         specifier: ^2.11.8
         version: 2.11.8
-      '@types/aos':
-        specifier: 3.0.7
-        version: 3.0.7
       aos:
         specifier: 2.3.4
         version: 2.3.4
@@ -81,6 +78,9 @@ importers:
       '@angular/cli':
         specifier: ^18.0.2
         version: 18.0.2(chokidar@3.6.0)
+      '@types/aos':
+        specifier: 3.0.7
+        version: 3.0.7
       '@types/express':
         specifier: ^4.17.17
         version: 4.17.21
