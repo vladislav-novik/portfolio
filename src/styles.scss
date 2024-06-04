@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 @import "variables";
 
 body {
@@ -14,19 +16,13 @@ body {
   font-family: $MainFont;
   font-size: 20px;
 }
+
+ul {
+  list-style: none;
+}
+
 .section-box {
   padding: 130px 0;
-}
-.section {
-  background: $Navy;
-}
-
-.code-font {
-  font-family: $CodeFont;
-}
-
-.e-font {
-  font-family: $MainFont;
 }
 
 .section-title {
@@ -131,36 +127,10 @@ a {
     height: 385px !important;
   }
 }
-@media (min-width: 1100px) and (max-width: 1300px) {
-  .container {
-    max-width: 950px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1100px) {
-  .container {
-    max-width: 800px;
-  }
-}
-
-@media (min-width: 880px) and (max-width: 992px) {
-  .container {
-    max-width: 700px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 880px) {
-  .container {
-    max-width: 600px;
-  }
-}
 
 @media (max-width: 768em) {
   .section-title {
     font-size: 24px;
-  }
-  .container {
-    width: 90%;
   }
 }
 
@@ -203,21 +173,82 @@ a {
   }
 }
 
+
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+
+$enable-grid-classes: false;
+$enable-cssgrid: true;
+$enable-negative-margins: true;
 
 $font-sizes: map-merge(
   $font-sizes,
   (
     'xs': .75rem,
     'sm': .875rem,
+    'xl': 4rem,
+    '2xl': 5rem,
   )
 );
 
+$spacers: map-merge(
+  $spacers,
+  (
+    '7': 3rem,
+    '8': 4rem,
+    '9': 6rem,
+    '10': 10rem,
+  )
+);
+
+$max-widths: (
+  'lg': 32rem,
+  'xl': 40rem,
+  '2xl': 48rem
+);
+
+@each $name, $size in $max-widths {
+  .mw-#{$name} {
+    max-width: $size !important;
+  }
+}
+
+$max-heights: (
+  'lg': 20rem,
+);
+
+@each $name, $size in $max-heights {
+  .mh-#{$name} {
+    max-height: $size !important;
+  }
+}
+
+$letter-spacings: (
+  'tight': -0.05em,
+  'wide': 0.05em
+);
+
+@each $name, $size in $letter-spacings {
+  .tracking-#{$name} {
+    letter-spacing: $size !important;
+  }
+}
+
+$line-height-sm: 1.1;
+
+.font-base {
+  font-family: $font-family-base;
+}
+
+.font-code {
+  font-family: $font-family-code;
+}
+
 @import "bootstrap/scss/bootstrap-utilities";
+@import "bootstrap/scss/transitions";
 @import "bootstrap/scss/containers";
-// @import "bootstrap/scss/grid";
+@import "bootstrap/scss/grid";
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
 

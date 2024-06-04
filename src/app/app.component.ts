@@ -3,6 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component'
 import { FooterComponent } from './layout/footer/footer.component'
 import { TranslateService } from '@ngx-translate/core'
+import { PLATFORM_ID } from '@angular/core';
+import * as aos from 'aos';
+import { isPlatformBrowser } from '@angular/common'
 
 @Component({
   selector: 'app-root',
@@ -14,9 +17,15 @@ import { TranslateService } from '@ngx-translate/core'
 export class AppComponent implements OnInit {
   title = 'portfolio';
   translate = inject(TranslateService);
+  platformId = inject(PLATFORM_ID);
 
   ngOnInit() {
     this.translate.addLangs(['en']);
     this.translate.setDefaultLang('en');
+
+    console.log(isPlatformBrowser(this.platformId), this.platformId);
+    if (isPlatformBrowser(this.platformId)) {
+      aos.init();
+    }
   }
 }
