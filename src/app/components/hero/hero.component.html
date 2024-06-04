@@ -1,19 +1,15 @@
-<section class="section banner">
-    <div [@bannerTrigger] class="container">
-        <div class="section-box-banner">
-            <div class="content">
-                <div>
-                    <h1>{{"Banner.Pretitle" | translate}}</h1>
-                </div>
+<section class="min-vh-100">
+    <div [@bannerTrigger] class="container d-table vh-100">
+        <div class="d-table-cell align-middle">
+            <div>
+                <h1 class="font-code text-secondary fs-6 my-4">{{"Banner.Pretitle" | translate}}</h1>
                 <div class='banner-title'>
-                    <h2>José Hernández.</h2>
-                    <h3>Software Developer</h3>
+                    <h2 class="m-0 text-light fs-2xl fw-semibold lh-sm">José Hernández.</h2>
+                    <h3 class="m-0 text-dark fs-2xl fw-semibold lh-sm">Software Developer</h3>
                 </div>
-                <div class='banner-description'>
-                    <p [innerHTML]='"Banner.Description" | translate' class="mt-4"></p>
-                </div>
+                <p [innerHTML]='"Banner.Description" | translate' class="mb-8 mw-lg"></p>
             </div>
-            <div class="div-btn-banner">
+            <div>
                 <a href="mailto:andresjosehr@gmail.com" target="_black" class="main-btn">
                     {{"Banner.ActionBtn" | translate}}
                 </a>
