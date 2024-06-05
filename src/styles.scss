@@ -208,19 +208,16 @@ $max-widths: (
   '2xl': 48rem
 );
 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);
+
 @each $name, $size in $max-widths {
   .mw-#{$name} {
     max-width: $size !important;
-  }
-}
-
-$max-heights: (
-  'lg': 20rem,
-);
-
-@each $name, $size in $max-heights {
-  .mh-#{$name} {
-    max-height: $size !important;
   }
 }
 

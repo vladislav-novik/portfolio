@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
     this.translate.addLangs(['en']);
     this.translate.setDefaultLang('en');
 
-    console.log(isPlatformBrowser(this.platformId), this.platformId);
     if (isPlatformBrowser(this.platformId)) {
       aos.init();
     }

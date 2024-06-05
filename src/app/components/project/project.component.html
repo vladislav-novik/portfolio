@@ -1,39 +1,31 @@
-<div class="d-flex mh-lg" [class.flex-row]="even()" [class.flex-row-reverse]="!even()" data-aos="fade-up" data-aos-duration="1000">
+<div class="project" [class.project--left]="even()" [class.project--right]="!even()" data-aos="fade-up" data-aos-duration="1000">
     <!-- TODO: use bootstrap carousel -->
     <owl-carousel-o [options]="customOptions">
         @for(image of project().images; track image; let i = $index) {
             <ng-template carouselSlide [id]="project().Title+i">
                 <div class="overflow-auto rounded mh-lg">
-                    <img class="rounded" [src]="image" [alt]="project().Title">
+                    <img class="img-fluid rounded" [src]="image" [alt]="project().Title">
                 </div>
             </ng-template>
         }
     </owl-carousel-o>
     
-    <div class="h-100" [class.project-info--right]="even()" [class.project-info--left]="!even()">
+    <div class="h-100" class="project-info">
         <div class="d-flex flex-column">
-            <h4 
-                [class.text-end]="even()"
-                [class.text-start]="!even()"
-                class="m-0 mt-2 text-secondary font-code fw-normal fs-sm"
-            >{{"FeatureProjects.Label" | translate}}</h4>
-            <h5 
-                [class.text-end]="even()"
-                [class.text-start]="!even()"
-                class="text-light fs-2 my-3"
-            >{{project().Title}}</h5>
+            <h4 class="m-0 mt-2 text-secondary font-code fw-normal fs-sm">{{"FeatureProjects.Label" | translate}}</h4>
+            <h5 class="text-light fs-2 my-3">{{project().Title}}</h5>
 
-            <div class="z-1 bg-primary rounded-1 fs-5 shadow-lg p-4">
+            <div class="project-description">
                 <p class="m-0" [innerHTML]="project().Description"></p>
             </div>
-            <ul [class.justify-content-end]="even()" [class.justify-content-start]="!even()" class="my-4 px-0 d-flex gap-3">
+            <ul class="my-4 px-0 d-flex gap-3">
                 @for(technology of project().Technologies; track technology) {
                     <li class="fs-6 underline">
                         {{technology}}
                     </li>
                 }
             </ul>
-            <div [class.text-right]="even()" [class.text-left]="!even()" class="project-links">
+            <div class="project-links">
                 <!-- <a *ngIf="project['ghLink']" style='color: inherit' [href]="project['ghLink']" target="_blank"><i class="ml-3 fab fa-github"></i></a>
                 <a *ngIf="project['demoLink']" style='color: inherit' [href]="project['demoLink']" target="_blank"><i class="ml-3 fas fa-external-link-alt"></i></a> -->
             </div>

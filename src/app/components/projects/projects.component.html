@@ -4,7 +4,7 @@
             <app-section-title [index]="3" [title]="'FeatureProjects.Title' | translate"></app-section-title>
         </div>
 
-        <div class="mt-4 d-flex flex-column row-gap-10">
+        <div class="projects">
             @for(project of 'FeatureProjects.Projects' | translate; track project.Title; let i = $index) {
                 <app-project [project]="project" [even]="i%2 === 0"></app-project>
             }
