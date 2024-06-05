@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, ViewEncapsulation, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core'
 import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o'
 
@@ -7,7 +7,7 @@ import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o'
   standalone: true,
   imports: [TranslateModule, CarouselModule],
   templateUrl: './project.component.html',
-  styleUrl: './project.component.scss'
+  styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
   customOptions: OwlOptions = {

@@ -1,9 +1,5 @@
 @import "variables";
 
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins/breakpoints";
-
 .mh-lg {
     max-height: 20rem;
 }
@@ -30,8 +26,7 @@
 
         .project-description {
             z-index: 1;
-            background-color: $primary;
-            font-size: 1.25rem;
+            // background-color: $primary;
             border-radius: 0.25rem;
             padding: 1.5rem;
             box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
@@ -68,7 +63,8 @@ owl-carousel-o {
     width: 600px;
 }
 
-@include media-breakpoint-down(sm) {
+// @include media-breakpoint-down(sm) {
+@media (max-width: 576px) {
     owl-carousel-o {
         width: 100%;
     }

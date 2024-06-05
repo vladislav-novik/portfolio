@@ -1,12 +1,10 @@
-<section class="min-vh-100">
-    <div [@bannerTrigger] class="container d-table vh-100">
-        <div class="d-table-cell align-middle">
+<section class="mt-12" id="hero">
+    <div [@bannerTrigger] class="container d-flex align-items-center">
+        <div>
             <div>
                 <h1 class="font-code text-secondary fs-6 my-4">{{"Banner.Pretitle" | translate}}</h1>
-                <div class='banner-title'>
-                    <h2 class="m-0 text-light fs-2xl fw-semibold lh-sm">José Hernández.</h2>
-                    <h3 class="m-0 text-dark fs-2xl fw-semibold lh-sm">Software Developer</h3>
-                </div>
+                <h2 class="m-0 text-light fs-2xl fw-semibold lh-sm">José Hernández.</h2>
+                <h3 class="m-0 text-dark fs-2xl fw-semibold lh-sm">Software Developer</h3>
                 <p [innerHTML]='"Banner.Description" | translate' class="mb-8 mw-lg"></p>
             </div>
             <div>

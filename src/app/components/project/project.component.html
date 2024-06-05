@@ -16,7 +16,7 @@
             <h5 class="text-light fs-2 my-3">{{project().Title}}</h5>
 
             <div class="project-description">
-                <p class="m-0" [innerHTML]="project().Description"></p>
+                <p class="m-0 fs-5" [innerHTML]="project().Description"></p>
             </div>
             <ul class="my-4 px-0 d-flex gap-3">
                 @for(technology of project().Technologies; track technology) {

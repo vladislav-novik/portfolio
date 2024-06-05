@@ -4,7 +4,7 @@
         #nav="ngbNav"
         [(activeId)]="active"
         orientation="vertical"
-        class="nav-tabs mt-0"
+        class="job-list nav-tabs mt-0"
     >
     @for (job of 'Experience.Jobs' | translate; track job.Tab; let idx = $index) {
         <li [title]="job.Tab" [ngbNavItem]="idx">
@@ -13,7 +13,7 @@
                 <h4 class="m-0 fs-4 text-light fw-medium">
                     {{ job.Title }} | <span class="text-secondary">{{ job.Tab }}</span>
                 </h4>
-                <h5 class="m-0 mb-4 text-body font-code fs-sm fw-normal tracking-wide">{{ job.Date }}</h5>
+                <h5 class="m-0 mb-4 text-primary font-code fs-sm fw-normal tracking-wide">{{ job.Date }}</h5>
                 @for (jobDescriptionParagraph of job.Description; track jobDescriptionParagraph) {
                     <p class="fs-5 my-2 ps-4 position-relative" [innerHTML]="jobDescriptionParagraph | translate"></p>
                 }
