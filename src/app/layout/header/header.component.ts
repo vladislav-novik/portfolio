@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, inject, signal } from '@angular/core'
+import { Component, HostListener, inject, signal } from '@angular/core'
 import { Router, RouterLink } from '@angular/router'
 import { trigger, style, query, transition, stagger, animate } from '@angular/animations'
 // import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
@@ -32,20 +32,20 @@ import { HamburgerComponent } from './hamburger/hamburger.component'
   ]
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   asideOpened = signal(false)
   scrollY = 0;
   languageFormControl = new UntypedFormControl();
   cvName = "";
   router = inject(Router);
 
-  ngOnInit(): void {
+  // ngOnInit(): void {
     // this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
     // this.languageFormControl.setValue(this.languageService.language)
-  }
+  // }
 
   @HostListener('window:scroll', ['getScrollPosition($event)'])
-  getScrollPosition(event: Event) {
+  getScrollPosition() {
     this.scrollY = window.scrollY
   }
 

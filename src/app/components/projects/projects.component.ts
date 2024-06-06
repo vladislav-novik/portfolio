@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core'
 import { SectionTitleComponent } from '../section-title/section-title.component'
 import { ProjectComponent } from '../project/project.component'
-import { OwlOptions } from 'ngx-owl-carousel-o'
 
 @Component({
   selector: 'app-projects',

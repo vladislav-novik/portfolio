@@ -1,5 +1,4 @@
-import { Component, signal } from '@angular/core';
-import { NgbNav, NgbNavContent, NgbNavItem, NgbNavLink, NgbNavOutlet } from '@ng-bootstrap/ng-bootstrap'
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core'
 import { SectionTitleComponent } from '../section-title/section-title.component'
 import { JobListComponent } from '../job-list/job-list.component'

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core'
 import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o'
 
@@ -24,7 +24,7 @@ export class ProjectComponent {
   project = input.required<Project>();
 }
 
-type Project = {
+interface Project {
   Title: string;
   Description: string;
   images: string[];
