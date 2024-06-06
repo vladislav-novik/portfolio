@@ -1,18 +1,18 @@
-import { Component, OnInit, HostListener, inject } from '@angular/core'
+import { Component, OnInit, HostListener, inject, signal } from '@angular/core'
 import { Router, RouterLink } from '@angular/router'
 import { trigger, style, query, transition, stagger, animate } from '@angular/animations'
-import { NgbNav, NgbNavItem } from '@ng-bootstrap/ng-bootstrap'
 // import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 // import { TranslateService } from '@ngx-translate/core';
 import { UntypedFormControl } from '@angular/forms'
-import { NgStyle } from '@angular/common'
 import { NavbarComponent } from './navbar/navbar.component'
+import { AsideComponent } from './aside/aside.component'
+import { HamburgerComponent } from './hamburger/hamburger.component'
 // import { LanguageService } from 'src/app/services/language/language.service';
 
 
 @Component({
   standalone: true,
-  imports: [RouterLink, NavbarComponent, NgbNav, NgbNavItem, NgStyle],
+  imports: [RouterLink, NavbarComponent, HamburgerComponent, AsideComponent],
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
@@ -33,7 +33,7 @@ import { NavbarComponent } from './navbar/navbar.component'
 })
 
 export class HeaderComponent implements OnInit {
-  responsiveMenuVisible = false;
+  asideOpened = signal(false)
   scrollY = 0;
   languageFormControl = new UntypedFormControl();
   cvName = "";

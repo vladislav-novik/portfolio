@@ -1,0 +1,15 @@
+@import "variables";
+
+.hamburger {
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+
+    div {
+        width: 2rem;
+        height: 2px;
+        background-color: $Green;
+        position: absolute;
+        right: 0.75rem;
+    }
+}

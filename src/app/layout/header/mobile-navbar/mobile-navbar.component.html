@@ -1,0 +1,16 @@
+<nav>
+    <ul>
+        @for(item of navbarItems; track item.name) {
+            <li @itemAnimation>
+                <a >
+                    <span>01. </span> {{item.name}}
+                </a>
+            </li>
+        }
+        <li @itemAnimation>
+            <a class="main-btn cv-btn">
+                {{"Header.cvBtn"}}
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,4 +1,4 @@
-<ul ngbNav #nav="ngbNav" class="navbar-collapse column-gap-4">
+<ul [@animateMenu] ngbNav #nav="ngbNav" class="navbar-collapse column-gap-4">
     @for (item of navbarItems; track item.name; let index = $index) {
         <app-navbar-item [name]="item.name" [index]="index + 1"></app-navbar-item>
     }
