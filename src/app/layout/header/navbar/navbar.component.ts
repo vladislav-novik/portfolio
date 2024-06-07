@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component'
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations'
-import { ColorModeService } from '../../../services/color-mode.service'
+import { ColorMode, ColorModeService } from '../../../services/color-mode.service'
 
 @Component({
   selector: 'app-navbar',
@@ -38,6 +38,8 @@ export class NavbarComponent {
     name: 'Header.Item4',
     route: '/contact'
   }]
+
+  ColorMode = ColorMode;
 
   colorModeService = inject(ColorModeService)
 }

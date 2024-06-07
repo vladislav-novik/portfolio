@@ -3,6 +3,6 @@
         <app-navbar-item [name]="item.name" [index]="index + 1"></app-navbar-item>
     }
     <li class="nav-item">
-        <button (click)="colorModeService.toggleColorMode()">Toggle color mode!</button>
+        <button (click)="colorModeService.setColorMode(ColorMode.Dark)">Toggle color mode!</button>
     </li>
 </ul>

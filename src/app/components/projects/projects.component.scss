@@ -1,16 +1,6 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins/breakpoints";
-
 .projects {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     row-gap: 10rem;
-}
-
-@include media-breakpoint-down(sm) {
-    .projects {
-        row-gap: 6rem;
-    }
 }
