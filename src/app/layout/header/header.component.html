@@ -3,11 +3,11 @@
         <a class="navbar-brand text-light" routerLink="/">
             <img src='assets/images/logo.png' width='25' alt="logo" />
         </a>
-        <div class="menu--sm">
+        <div class="block sm:hidden">
             <app-aside [(opened)]="asideOpened"></app-aside>
             <app-hamburger [(opened)]="asideOpened"></app-hamburger>
         </div>
-        <div class="menu--md">
+        <div class="hidden sm:block">
             <app-navbar></app-navbar>
         </div>
     </div>

@@ -9,30 +9,50 @@ export class ColorModeService {
   private colorMode: ColorMode = ColorMode.Light;
 
   constructor() {
-    if (!this.doc.defaultView?.localStorage) {
-      // this.addColorModeBSAttribute();
+    if (!this.doc) {
       return;
     }
 
     const storedColorMode = localStorage.getItem('colorMode');
     if (storedColorMode) {
-      this.colorMode = storedColorMode as ColorMode;
+      this.setColorMode(storedColorMode as ColorMode);
+      return;
     }
-    this.addColorModeBSAttribute();
+
+    this.setSystemColorPrefers();
   }
 
-  toggleColorMode() {
-    this.colorMode = this.colorMode === ColorMode.Light ? ColorMode.Dark : ColorMode.Light;
-    localStorage.setItem('colorMode', this.colorMode);
-    this.addColorModeBSAttribute();
+  setColorMode(colorMode: ColorMode) {
+    localStorage.setItem('colorMode', colorMode);
+
+    if (colorMode === ColorMode.System) {
+      this.setSystemColorPrefers();
+      return;
+    }
+
+    this.colorMode = colorMode;
+    this.addColorModeClass(this.colorMode);
   }
 
-  private addColorModeBSAttribute() {
-    document.documentElement.setAttribute('data-bs-theme', this.colorMode);
+  private getSystemColorPrefers() {
+    const systemColorMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? ColorMode.Dark : ColorMode.Light;
+    return systemColorMode;
+  }
+   
+  private setSystemColorPrefers() {
+    this.colorMode = ColorMode.System;
+    const systemColorMode = this.getSystemColorPrefers();
+    this.addColorModeClass(systemColorMode);
+  }
+
+  private addColorModeClass(colorMode: ColorMode) {
+    document.documentElement.classList.remove(ColorMode.Light, ColorMode.Dark);
+    document.documentElement.classList.add(colorMode);
   }
 }
 
 export enum ColorMode {
   Light = 'light',
-  Dark = 'dark'
+  Dark = 'dark',
+  System = 'system',
 }
