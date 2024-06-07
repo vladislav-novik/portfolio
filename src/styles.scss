@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: $Navy;
+  // background-color: $body-bg;
   color: $Slate;
   font-family: $MainFont;
   font-size: 1.25rem;
@@ -122,14 +122,6 @@ a {
   }
 }
 
-/* Importing Bootstrap SCSS file. */
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-
-$enable-grid-classes: false;
-$enable-cssgrid: true;
-$enable-negative-margins: true;
-
 .font-base {
   font-family: $font-family-base;
 }
@@ -137,63 +129,3 @@ $enable-negative-margins: true;
 .font-code {
   font-family: $font-family-code;
 }
-
-$font-sizes: map-merge(
-  $font-sizes,
-  (
-    'xs': .75rem,
-    'sm': .875rem,
-    'xl': 4rem,
-    '2xl': 5rem,
-  )
-);
-
-$spacers: map-merge(
-  $spacers,
-  (
-    '7': 3rem,
-    '8': 4rem,
-    '9': 6rem,
-    '10': 10rem,
-    '12': 12rem,
-  )
-);
-
-$max-widths: (
-  'lg': 32rem,
-  'xl': 40rem,
-  '2xl': 48rem
-);
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-);
-
-@each $name, $size in $max-widths {
-  .mw-#{$name} {
-    max-width: $size !important;
-  }
-}
-
-$letter-spacings: (
-  'tight': -0.05em,
-  'wide': 0.05em
-);
-
-@each $name, $size in $letter-spacings {
-  .tracking-#{$name} {
-    letter-spacing: $size !important;
-  }
-}
-
-$line-height-sm: 1.1;
-
-@import "bootstrap/scss/bootstrap-utilities";
-@import "bootstrap/scss/transitions";
-@import "bootstrap/scss/containers";
-@import "bootstrap/scss/grid";
-@import "bootstrap/scss/nav";
-@import "bootstrap/scss/navbar";

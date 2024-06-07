@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { NgbNav, NgbNavItem } from '@ng-bootstrap/ng-bootstrap'
+import { Component, inject } from '@angular/core';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component'
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations'
+import { ColorModeService } from '../../../services/color-mode.service'
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgbNav, NgbNavItem, NavbarItemComponent],
+  imports: [NavbarItemComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   animations: [
@@ -38,4 +38,6 @@ export class NavbarComponent {
     name: 'Header.Item4',
     route: '/contact'
   }]
+
+  colorModeService = inject(ColorModeService)
 }

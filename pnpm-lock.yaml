@@ -38,9 +38,6 @@ importers:
       '@angular/ssr':
         specifier: ^18.0.2
         version: 18.0.2(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))
-      '@ng-bootstrap/ng-bootstrap':
-        specifier: 16.0.0
-        version: 16.0.0(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(@angular/forms@18.0.1(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(@angular/platform-browser@18.0.1(@angular/animations@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6)))(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6)))(rxjs@7.8.1))(@popperjs/core@2.11.8)(rxjs@7.8.1)
       '@ngx-translate/core':
         specifier: 15.0.0
         version: 15.0.0(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1)
@@ -53,9 +50,6 @@ importers:
       aos:
         specifier: 2.3.4
         version: 2.3.4
-      bootstrap:
-        specifier: ^5.3.2
-        version: 5.3.3(@popperjs/core@2.11.8)
       express:
         specifier: ^4.18.2
         version: 4.19.2
@@ -1402,16 +1396,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@ng-bootstrap/ng-bootstrap@16.0.0':
-    resolution: {integrity: sha512-+FJ3e6cX9DW2t7021Ji3oz433rk3+4jLfqzU+Jyx6/vJz1dIOaML3EAY6lYuW4TLiXgMPOMvs6KzPFALGh4Lag==}
-    peerDependencies:
-      '@angular/common': ^17.0.0
-      '@angular/core': ^17.0.0
-      '@angular/forms': ^17.0.0
-      '@angular/localize': ^17.0.0
-      '@popperjs/core': ^2.11.8
-      rxjs: ^6.5.3 || ^7.4.0
-
   '@ngtools/webpack@18.0.2':
     resolution: {integrity: sha512-I+ZNFGBnykUWBwGPCXy6m9R2fIX/ovnAUHylvThYd/M+FUfc+Z/3DpKEUBYIOLVCLNZR5nuK0t9QLlazYhWFgg==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -2107,11 +2091,6 @@ packages:
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
-
-  bootstrap@5.3.3:
-    resolution: {integrity: sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==}
-    peerDependencies:
-      '@popperjs/core': ^2.11.8
 
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -6200,15 +6179,6 @@ snapshots:
   '@msgpackr-extract/msgpackr-extract-win32-x64@3.0.2':
     optional: true
 
-  '@ng-bootstrap/ng-bootstrap@16.0.0(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(@angular/forms@18.0.1(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(@angular/platform-browser@18.0.1(@angular/animations@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6)))(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6)))(rxjs@7.8.1))(@popperjs/core@2.11.8)(rxjs@7.8.1)':
-    dependencies:
-      '@angular/common': 18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1)
-      '@angular/core': 18.0.1(rxjs@7.8.1)(zone.js@0.14.6)
-      '@angular/forms': 18.0.1(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(@angular/platform-browser@18.0.1(@angular/animations@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6)))(@angular/common@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6)))(rxjs@7.8.1)
-      '@popperjs/core': 2.11.8
-      rxjs: 7.8.1
-      tslib: 2.6.2
-
   '@ngtools/webpack@18.0.2(@angular/compiler-cli@18.0.1(@angular/compiler@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6)))(typescript@5.4.5))(typescript@5.4.5)(webpack@5.91.0(esbuild@0.21.3))':
     dependencies:
       '@angular/compiler-cli': 18.0.1(@angular/compiler@18.0.1(@angular/core@18.0.1(rxjs@7.8.1)(zone.js@0.14.6)))(typescript@5.4.5)
@@ -6989,10 +6959,6 @@ snapshots:
       multicast-dns: 7.2.5
 
   boolbase@1.0.0: {}
-
-  bootstrap@5.3.3(@popperjs/core@2.11.8):
-    dependencies:
-      '@popperjs/core': 2.11.8
 
   brace-expansion@1.1.11:
     dependencies:
