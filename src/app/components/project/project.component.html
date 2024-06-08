@@ -1,26 +1,24 @@
 <div class="project" [class.project--left]="even()" [class.project--right]="!even()" data-aos="fade-up" data-aos-duration="1000">
-    <!-- TODO: use bootstrap carousel -->
     <owl-carousel-o [options]="customOptions">
-        @for(image of project().images; track image; let i = $index) {
-            <ng-template carouselSlide [id]="project().Title+i">
-                <div class="overflow-auto rounded mh-lg">
-                    <img class="img-fluid rounded" [src]="image" [alt]="project().Title">
+        @for(image of project().images; track image + i; let i = $index) {
+            <ng-template carouselSlide [id]="project().Title + i">
+                <div class="overflow-auto rounded max-h-lg">
+                    <img class="rounded" [src]="image" [alt]="project().Title">
                 </div>
             </ng-template>
         }
     </owl-carousel-o>
     
-    <div class="h-100" class="project-info">
-        <div class="d-flex flex-column">
-            <h4 class="m-0 mt-2 text-secondary font-code fw-normal fs-sm">{{"FeatureProjects.Label" | translate}}</h4>
-            <h5 class="text-light fs-2 my-3">{{project().Title}}</h5>
-
-            <div class="project-description">
-                <p class="m-0 fs-5" [innerHTML]="project().Description"></p>
+    <div class="project-info">
+        <div class="flex flex-col">
+            <h4 class="mt-2 text-secondary font-code font-normal text-base">{{"FeatureProjects.Label" | translate}}</h4>
+            <h5 class="text-light my-3 text-5xl">{{project().Title}}</h5>
+            <div class="z-10 rounded p-6 shadow-md bg-secondary-bg dark:bg-secondary-bg-dark">
+                <p class="text-lg" [innerHTML]="project().Description"></p>
             </div>
-            <ul class="my-4 px-0 d-flex gap-3">
+            <ul class="my-4 flex gap-x-4">
                 @for(technology of project().Technologies; track technology) {
-                    <li class="fs-6 underline">
+                    <li class="text-sm underline">
                         {{technology}}
                     </li>
                 }

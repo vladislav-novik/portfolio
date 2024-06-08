@@ -1,9 +1,9 @@
-<nav>
-    <ul>
+<nav class="w-full h-full">
+    <ul class="flex flex-col gap-y-4 items-center">
         @for(item of navbarItems; track item.name) {
-            <li @itemAnimation>
-                <a >
-                    <span>01. </span> {{item.name}}
+            <li class="text-base text-light dark:text-light-dark" @itemAnimation>
+                <a>
+                    <span class="text-secondary dark:text-secondary-dark">01. </span> {{item.name}}
                 </a>
             </li>
         }
@@ -14,3 +14,4 @@
         </li>
     </ul>
 </nav>
+

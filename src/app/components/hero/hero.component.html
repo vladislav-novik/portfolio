@@ -1,11 +1,12 @@
-<section class="mt-12" id="hero">
-    <div [@bannerTrigger] class="container d-flex align-items-center">
+<section class="h-lvh" id="hero">
+    <!-- [@bannerTrigger] -->
+    <div class="h-full flex items-center">
         <div>
             <div>
-                <h1 class="font-code text-secondary fs-6 my-4">{{"Banner.Pretitle" | translate}}</h1>
-                <h2 class="m-0 text-light fs-2xl fw-semibold lh-sm">José Hernández.</h2>
-                <h3 class="m-0 text-dark fs-2xl fw-semibold lh-sm">Software Developer</h3>
-                <p [innerHTML]='"Banner.Description" | translate' class="mb-8 mw-lg"></p>
+                <h1 class="font-code text-secondary text-base">{{"Banner.Pretitle" | translate}}</h1>
+                <h2 class="text-light text-5xl font-semibold leading-snug">José Hernández.</h2>
+                <h3 class="text-dark text-4xl font-semibold leading-snug">Software Developer</h3>
+                <p [innerHTML]='"Banner.Description" | translate' class="mb-8 max-w-md"></p>
             </div>
             <div>
                 <a href="mailto:andresjosehr@gmail.com" target="_black" class="main-btn">

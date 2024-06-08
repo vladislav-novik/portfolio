@@ -1,5 +1,6 @@
-<div tabindex="1" class="hamburger" (click)="opened.set(!opened())" (keyup.Space)="opened.set(!opened())">
-    <div [@first]="opened()"></div>
-    <div [@middle]="opened()"></div>
-    <div [@last]="opened()"></div>
+<div tabindex="1" class="relative cursor-pointer z-[3]" (click)="opened.set(!opened())" (keyup.Space)="opened.set(!opened())">
+    <div class="line" [@first]="opened()"></div>
+    <div class="line" [@middle]="opened()"></div>
+    <div class="line" [@last]="opened()"></div>
 </div>
+

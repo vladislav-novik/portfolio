@@ -8,13 +8,13 @@
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
-// * {
-//   box-sizing: border-box;
-// }
+a {
+  @apply cursor-pointer;
+}
 
 body {
-  // background-color: $body-bg;
-  color: $Slate;
+  @apply text-primary;
+  @apply dark:text-primary-dark;
   font-family: $MainFont;
   font-size: 1.25rem;
   line-height: 1.3;
@@ -101,7 +101,7 @@ a {
   text-decoration: none;
   display: inline-block;
   position: relative;
-  color: $Green !important;
+  color: $Green;
 }
 .underline:after {
   background: none repeat scroll 0 0 transparent;

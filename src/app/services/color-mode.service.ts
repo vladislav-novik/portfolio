@@ -1,15 +1,14 @@
-import { Injectable, inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Injectable, computed, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ColorModeService {
-  private doc = inject(DOCUMENT);
-  private colorMode: ColorMode = ColorMode.Light;
+  private colorMode = signal<ColorMode>(ColorMode.Light);
+  public isDark = computed(() => this.colorMode() === ColorMode.Dark);
 
   constructor() {
-    if (!this.doc) {
+    if (typeof window === 'undefined') {
       return;
     }
 
@@ -30,8 +29,8 @@ export class ColorModeService {
       return;
     }
 
-    this.colorMode = colorMode;
-    this.addColorModeClass(this.colorMode);
+    this.colorMode.set(colorMode);
+    this.addColorModeClass(colorMode);
   }
 
   private getSystemColorPrefers() {
@@ -40,7 +39,7 @@ export class ColorModeService {
   }
    
   private setSystemColorPrefers() {
-    this.colorMode = ColorMode.System;
+    this.colorMode.set(ColorMode.System);
     const systemColorMode = this.getSystemColorPrefers();
     this.addColorModeClass(systemColorMode);
   }

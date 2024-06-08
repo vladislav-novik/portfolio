@@ -1,13 +1,10 @@
-<section id="projects">
-    <div class="container-xl">
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <app-section-title [index]="3" [title]="'FeatureProjects.Title' | translate"></app-section-title>
-        </div>
-
-        <div class="projects">
-            @for(project of 'FeatureProjects.Projects' | translate; track project.Title; let i = $index) {
-                <app-project [project]="project" [even]="i%2 === 0"></app-project>
-            }
-        </div>
+<section class="mt-64" id="projects">
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <app-section-title [index]="3" [title]="'FeatureProjects.Title' | translate"></app-section-title>
+    </div>
+    <div class="mt-8 flex flex-col gap-y-40">
+        @for(project of 'FeatureProjects.Projects' | translate; track project.Title; let i = $index) {
+            <app-project [project]="project" [even]="i%2 === 0"></app-project>
+        }
     </div>
 </section>

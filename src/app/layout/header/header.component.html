@@ -1,14 +1,17 @@
-<nav class="navbar main-navbar on-top" [class.nav-shadow]='this.scrollY > 0'>
-    <div [@animateMenu] class="container">
-        <a class="navbar-brand text-light" routerLink="/">
+<nav class="fixed py-6 bg-body w-full top-0 z-[1] transition-all duration-200 dark:bg-body-dark" [class.nav-shadow]='this.scrollY > 0'>
+    <div [@animateMenu] class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <a routerLink="/">
             <img src='assets/images/logo.png' width='25' alt="logo" />
         </a>
-        <div class="block sm:hidden">
-            <app-aside [(opened)]="asideOpened"></app-aside>
-            <app-hamburger [(opened)]="asideOpened"></app-hamburger>
-        </div>
-        <div class="hidden sm:block">
-            <app-navbar></app-navbar>
+        <div class="flex items-center">
+            <div class="hidden sm:block">
+                <app-navbar></app-navbar>
+            </div>
+            <app-theme-toggler></app-theme-toggler>
+            <div class="block sm:hidden">
+                <app-aside [(opened)]="asideOpened"></app-aside>
+                <app-hamburger [(opened)]="asideOpened"></app-hamburger>
+            </div>
         </div>
     </div>
 </nav>

@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations'
 import { Component, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core'
 
@@ -6,7 +7,15 @@ import { TranslateModule } from '@ngx-translate/core'
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './job-list.component.html',
-  styleUrl: './job-list.component.scss'
+  styleUrl: './job-list.component.scss',
+  animations: [
+    trigger('jobListTrigger', [
+      transition(":enter", [
+        style({ opacity: 0 }),
+        animate("350ms ease-in-out", style({ opacity: 1 }))
+      ]),
+    ],
+  )]
 })
 export class JobListComponent {
   active = signal(0);

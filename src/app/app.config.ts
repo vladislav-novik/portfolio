@@ -4,7 +4,6 @@ import { provideRouter } from '@angular/router';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
 import { HttpClient, provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http'
 
@@ -13,7 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     // provideExperimentalZonelessChangeDetection(),
     provideRouter(routes),
-    provideClientHydration(),
     provideAnimationsAsync(),
     provideHttpClient(withFetch(), withInterceptorsFromDi()),
     importProvidersFrom(TranslateModule.forRoot({

@@ -7,12 +7,13 @@ import { UntypedFormControl } from '@angular/forms'
 import { NavbarComponent } from './navbar/navbar.component'
 import { AsideComponent } from './aside/aside.component'
 import { HamburgerComponent } from './hamburger/hamburger.component'
+import { ThemeTogglerComponent } from '../../components/theme-toggler/theme-toggler.component'
 // import { LanguageService } from 'src/app/services/language/language.service';
 
 
 @Component({
   standalone: true,
-  imports: [RouterLink, NavbarComponent, HamburgerComponent, AsideComponent],
+  imports: [RouterLink, NavbarComponent, HamburgerComponent, AsideComponent, ThemeTogglerComponent],
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],

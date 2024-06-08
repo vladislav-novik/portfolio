@@ -1,8 +1,5 @@
-<ul [@animateMenu] class="navbar-collapse column-gap-4 m-0">
+<ul [@animateMenu] class="flex gap-x-4">
     @for (item of navbarItems; track item.name; let index = $index) {
         <app-navbar-item [name]="item.name" [index]="index + 1"></app-navbar-item>
     }
-    <li class="nav-item">
-        <button (click)="colorModeService.setColorMode(ColorMode.Dark)">Toggle color mode!</button>
-    </li>
 </ul>

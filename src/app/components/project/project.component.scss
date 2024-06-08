@@ -1,102 +1,83 @@
 @import "variables";
 
-.mh-lg {
-    max-height: 20rem;
+owl-carousel-o {
+    @apply w-full;
 }
 
 .project {
-    display: flex;
-    max-height: 20rem;
-    
-    &--left {
-        flex-direction: row;
+    @apply flex flex-col-reverse;
+    max-height: unset;
 
+    &--left, &--right {
         .project-info {
-            margin-left: -57px;
-            margin-right: 0px;
-
+            @apply m-0;
+        
             h4, h5 {
+                @apply text-start;
+            }
+
+            ul {
+                @apply justify-start;
+            }
+        }
+    }
+
+    .project-description {
+        @apply p-0;
+        // background-color: transparent;
+        // border-radius: 0;
+        // padding: 0;
+        // box-shadow: none;
+    }
+}
+
+@screen sm {
+    .project {
+        @apply flex max-h-lg;
+        
+        &--left {
+            @apply flex-row;
+    
+            .project-info {
+                @apply mr-0 -ml-14;
+    
+                h4, h5 {
+                    @apply text-end
+                }
+    
+                ul {
+                    @apply justify-end;
+                }
+            }
+    
+            .project-links {
                 text-align: end;
             }
-
-            ul {
-                justify-content: flex-end;
-            }
         }
-
-        .project-description {
-            z-index: 1;
-            // background-color: $primary;
-            border-radius: 0.25rem;
-            padding: 1.5rem;
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-        }
-
-        .project-links {
-            text-align: end;
-        }
-    }
-
-    &--right {
-        flex-direction: row-reverse;
-
-        .project-info {
-            margin-right: -57px;
-            margin-left: 0px;
-
-            h4, h5 {
-                text-align: start;
-            }
-
-            ul {
-                justify-content: flex-start;
-            }
-        }
-
-        .project-links {
-            text-align: start;
-        }
-    }
-}
-
-owl-carousel-o {
-    width: 600px;
-}
-
-// @include media-breakpoint-down(sm) {
-@media (max-width: 576px) {
-    owl-carousel-o {
-        width: 100%;
-    }
-
-    .mh-lg {
-        max-height: 16rem;
-    }
-
-    .project {
-        flex-direction: column-reverse;
-        max-height: unset;
-
-        &--left, &--right {
+    
+        &--right {
+            @apply flex-row-reverse;
+    
             .project-info {
-                margin: 0;
-            
+                @apply ml-0 -mr-14;
+    
                 h4, h5 {
-                    text-align: start;
+                    @apply text-start;
                 }
-
+    
                 ul {
-                    justify-content: flex-start;
+                    @apply justify-start;
                 }
             }
+    
+            .project-links {
+                @apply text-start;
+            }
         }
-
-        .project-description {
-            background-color: transparent;
-            border-radius: 0;
-            padding: 0;
-            box-shadow: none;
-        }
+    }
+    
+    owl-carousel-o {
+        @apply max-w-3xl;
     }
 }
 
