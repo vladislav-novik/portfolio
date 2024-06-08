@@ -12,8 +12,9 @@ export class ScrollAnimationDirective implements OnInit {
   direction = input<boolean>(true);
 
   ngOnInit(): void {
-    console.log('ScrollAnimationDirective', this.direction());
-    this.direction() ? this.animationService.fadeUp(this.el.nativeElement) : this.animationService.fadeRight(this.el.nativeElement);
+    this.direction() ? 
+      this.animationService.fadeUp(this.el.nativeElement) : 
+      this.animationService.fadeRight(this.el.nativeElement);
   }
 
 }
