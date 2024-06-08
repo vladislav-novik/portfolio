@@ -1,27 +1,19 @@
-import { Directive, ElementRef, inject } from '@angular/core';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Directive, ElementRef, OnInit, inject, input } from '@angular/core';
+import { AnimationService } from '../services/animation.service'
 
 @Directive({
   selector: '[appScrollAnimation]',
+  inputs: [],
   standalone: true
 })
-export class ScrollAnimationDirective {
+export class ScrollAnimationDirective implements OnInit {
   el = inject(ElementRef);
+  animationService = inject(AnimationService);
+  direction = input<boolean>(true);
 
-  constructor() {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(this.el.nativeElement, {
-      scrollTrigger: {
-        trigger: this.el.nativeElement,
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse'
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1
-    });
+  ngOnInit(): void {
+    console.log('ScrollAnimationDirective', this.direction());
+    this.direction() ? this.animationService.fadeUp(this.el.nativeElement) : this.animationService.fadeRight(this.el.nativeElement);
   }
 
 }

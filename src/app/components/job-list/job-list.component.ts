@@ -1,11 +1,12 @@
 import { animate, style, transition, trigger } from '@angular/animations'
 import { Component, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core'
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive'
 
 @Component({
   selector: 'app-job-list',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, ScrollAnimationDirective],
   templateUrl: './job-list.component.html',
   styleUrl: './job-list.component.scss',
   animations: [

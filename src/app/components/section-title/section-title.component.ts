@@ -1,9 +1,10 @@
 import { Component, input } from '@angular/core';
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive'
 
 @Component({
   selector: 'app-section-title',
   standalone: true,
-  imports: [],
+  imports: [ScrollAnimationDirective],
   templateUrl: './section-title.component.html',
   styleUrl: './section-title.component.scss'
 })

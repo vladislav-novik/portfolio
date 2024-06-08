@@ -1,6 +1,6 @@
 <section class="h-svh flex items-center" id="contact">
     <div class="max-w-lg mx-auto text-center">
-        <div data-aos="fade-up" data-aos-duration="1000">
+        <div appScrollAnimation>
             <h3 class="font-code text-secondary text-base">
                 05. {{ "Contact.Pretitle" | translate }}
             </h3>
@@ -8,16 +8,14 @@
                 {{ "Contact.Title" | translate }}
             </h4>
         </div>
-        <p data-aos="fade-up" data-aos-duration="1000">
+        <p appScrollAnimation>
             {{ "Contact.Content" | translate }}
         </p>
-        <div class="mt-6" data-aos="fade-up" data-aos-duration="1000">
+        <div class="mt-6" appScrollAnimation>
             <a
                 href="mailto:andresjosehr@gmail.com"
                 target="_blank"
                 class="main-btn"
-                data-aos="fade-up"
-                data-aos-duration="1000"
             >
                 {{ "Contact.Btn" | translate }}
             </a>

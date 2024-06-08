@@ -1,4 +1,4 @@
-<div class="project" [class.project--left]="even()" [class.project--right]="!even()" data-aos="fade-up" data-aos-duration="1000">
+<div class="project" [class.project--left]="even()" [class.project--right]="!even()" appScrollAnimation>
     <owl-carousel-o [options]="customOptions">
         @for(image of project().images; track image + i; let i = $index) {
             <ng-template carouselSlide [id]="project().Title + i">
