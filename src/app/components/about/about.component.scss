@@ -1,12 +1,11 @@
-@import "variables";
-
 .about-img-container{
     width: 324px;
     margin: auto;
 
     &:after{
+        @apply border-accent dark:border-accent-dark;
         content: '';
-        border: 2px solid $Green;
+        border: 2px solid;
         z-index: 0;
         display: block;
         position: relative;

@@ -4,10 +4,10 @@
     >
     @for (job of 'Experience.Jobs' | translate; track job.Tab; let idx = $index) {
         <li
-            [class.active]="idx === active()"
-            class="cursor-pointer py-2 px-4 border-l-2 border-lighter dark:border-lighter-dark
-            text-lighter transition-all duration-300 dark:text-lighter-dark
-            hover:text-secondary hover:dark:text-secondary-dark hover:bg-secondary-bg hover:dark:bg-secondary-bg-dark" 
+            [class.active-job]="idx === active()"
+            class="cursor-pointer py-2 px-4 border-l-2 border-blue-lightest dark:border-gray
+            text-blue-darker transition-all duration-300 dark:text-blue-lighter
+            hover:text-accent hover:dark:text-accent-dark hover:bg-blue-lighter hover:dark:bg-blue-light" 
             (click)="active.set(idx)"
         >
             <a class="text-base">{{ job.Tab }}</a>
@@ -18,12 +18,12 @@
         @for (job of 'Experience.Jobs' | translate; track job.Tab; let idx = $index) {
             @if (idx === active()) {
                 <div @jobListTrigger>
-                    <h4 class="m-0 text-3xl text-light font-medium">
+                    <h4 class="m-0 text-3xl text-blue font-medium dark:text-white">
                         {{ job.Title }} | <span class="text-secondary">{{ job.Tab }}</span>
                     </h4>
-                    <h5 class="m-0 mb-4 text-lighter font-code text-sm font-normal tracking-wider dark:text-lighter-dark">{{ job.Date }}</h5>
+                    <h5 class="m-0 mb-4 text-blue-darker font-mono text-sm font-normal tracking-wider dark:text-blue-lighter">{{ job.Date }}</h5>
                     @for (jobDescriptionParagraph of job.Description; track jobDescriptionParagraph) {
-                        <p class="relative text-lg my-2 pl-4 " [innerHTML]="jobDescriptionParagraph | translate"></p>
+                        <p class="description relative text-lg my-2 pl-4 " [innerHTML]="jobDescriptionParagraph | translate"></p>
                     }
                 </div>
             }

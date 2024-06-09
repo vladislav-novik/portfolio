@@ -11,9 +11,9 @@
     
     <div class="project-info">
         <div class="flex flex-col">
-            <h4 class="mt-2 text-secondary font-code font-normal text-base">{{"FeatureProjects.Label" | translate}}</h4>
-            <h5 class="text-light my-3 text-5xl">{{project().Title}}</h5>
-            <div class="z-10 rounded p-6 shadow-md bg-secondary-bg dark:bg-secondary-bg-dark">
+            <h4 class="mt-2 text-accent font-mono font-normal text-base dark:text-accent-dark">{{"FeatureProjects.Label" | translate}}</h4>
+            <h5 class="text-blue my-3 text-5xl dark:text-gray">{{project().Title}}</h5>
+            <div class="rounded p-6 shadow-md bg-blue-lighter dark:bg-blue-light">
                 <p class="text-lg" [innerHTML]="project().Description"></p>
             </div>
             <ul class="my-4 flex gap-x-4">

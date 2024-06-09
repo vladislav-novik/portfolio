@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { NavbarItemComponent } from './navbar-item/navbar-item.component'
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations'
 import { ColorMode, ColorModeService } from '../../../services/color-mode.service'
+import { ThemeTogglerComponent } from '../../../components/theme-toggler/theme-toggler.component'
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NavbarItemComponent],
+  imports: [NavbarItemComponent, ThemeTogglerComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   animations: [

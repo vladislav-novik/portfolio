@@ -1,10 +1,11 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { Injectable, computed, effect, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ColorModeService {
   private colorMode = signal<ColorMode>(ColorMode.Light);
+  private reverse = computed(() => this.colorMode() === ColorMode.Light ? ColorMode.Dark : ColorMode.Light);
   public isDark = computed(() => this.colorMode() === ColorMode.Dark);
 
   constructor() {
@@ -12,46 +13,26 @@ export class ColorModeService {
       return;
     }
 
+    effect(() => this.addColorModeClass());
+    
     const storedColorMode = localStorage.getItem('colorMode');
-    if (storedColorMode) {
-      this.setColorMode(storedColorMode as ColorMode);
-      return;
-    }
 
-    this.setSystemColorPrefers();
-  }
-
-  setColorMode(colorMode: ColorMode) {
-    localStorage.setItem('colorMode', colorMode);
-
-    if (colorMode === ColorMode.System) {
-      this.setSystemColorPrefers();
-      return;
-    }
-
+    const colorMode = storedColorMode as ColorMode || ColorMode.Light;
     this.colorMode.set(colorMode);
-    this.addColorModeClass(colorMode);
   }
 
-  private getSystemColorPrefers() {
-    const systemColorMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? ColorMode.Dark : ColorMode.Light;
-    return systemColorMode;
-  }
-   
-  private setSystemColorPrefers() {
-    this.colorMode.set(ColorMode.System);
-    const systemColorMode = this.getSystemColorPrefers();
-    this.addColorModeClass(systemColorMode);
+  toggleColorMode() {
+    localStorage.setItem('colorMode', this.reverse());
+    this.colorMode.set(this.reverse());
   }
 
-  private addColorModeClass(colorMode: ColorMode) {
+  private addColorModeClass() {
     document.documentElement.classList.remove(ColorMode.Light, ColorMode.Dark);
-    document.documentElement.classList.add(colorMode);
+    document.documentElement.classList.add(this.colorMode());
   }
 }
 
 export enum ColorMode {
   Light = 'light',
   Dark = 'dark',
-  System = 'system',
 }

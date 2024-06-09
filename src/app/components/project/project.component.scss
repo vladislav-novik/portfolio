@@ -1,7 +1,9 @@
-@import "variables";
-
 owl-carousel-o {
     @apply w-full;
+
+    // .owl-item {
+    //     @apply rounded;
+    // }
 }
 
 .project {
@@ -24,10 +26,6 @@ owl-carousel-o {
 
     .project-description {
         @apply p-0;
-        // background-color: transparent;
-        // border-radius: 0;
-        // padding: 0;
-        // box-shadow: none;
     }
 }
 
@@ -94,12 +92,12 @@ owl-carousel-o {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $Green;
+    @apply bg-accent dark:bg-accent-dark;
     border-radius: 3px;
 }
 
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $Green;
+    @apply bg-accent dark:bg-accent-dark;
 }

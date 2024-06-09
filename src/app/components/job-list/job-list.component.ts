@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations'
-import { Component, signal } from '@angular/core';
+import { Component, ViewEncapsulation, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core'
 import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive'
 
@@ -9,6 +9,7 @@ import { ScrollAnimationDirective } from '../../directives/scroll-animation.dire
   imports: [TranslateModule, ScrollAnimationDirective],
   templateUrl: './job-list.component.html',
   styleUrl: './job-list.component.scss',
+  encapsulation: ViewEncapsulation.None,
   animations: [
     trigger('jobListTrigger', [
       transition(":enter", [

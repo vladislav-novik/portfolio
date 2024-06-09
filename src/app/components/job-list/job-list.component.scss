@@ -1,10 +1,10 @@
-.active{
-    @apply text-secondary bg-secondary-bg dark:text-secondary-dark dark:bg-secondary-bg-dark;
+.active-job {
+    @apply text-accent bg-blue-lighter dark:text-accent-dark dark:bg-blue-light;
 }
 
-p {
+.description {
     &:before {
         content: '▹';
-        @apply absolute left-0 text-secondary;
+        @apply absolute left-0 text-accent dark:text-accent-dark;
     }
 }

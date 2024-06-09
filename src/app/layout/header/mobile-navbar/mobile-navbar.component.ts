@@ -1,10 +1,11 @@
 import { animate, style, transition, trigger } from '@angular/animations'
 import { Component } from '@angular/core';
+import { ThemeTogglerComponent } from '../../../components/theme-toggler/theme-toggler.component'
 
 @Component({
   selector: 'app-mobile-navbar',
   standalone: true,
-  imports: [],
+  imports: [ThemeTogglerComponent],
   templateUrl: './mobile-navbar.component.html',
   styleUrl: './mobile-navbar.component.scss',
   animations: [

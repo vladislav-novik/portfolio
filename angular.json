@@ -39,8 +39,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/fonts.scss"
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [

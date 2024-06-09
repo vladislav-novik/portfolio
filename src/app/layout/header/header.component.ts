@@ -13,7 +13,7 @@ import { ThemeTogglerComponent } from '../../components/theme-toggler/theme-togg
 
 @Component({
   standalone: true,
-  imports: [RouterLink, NavbarComponent, HamburgerComponent, AsideComponent, ThemeTogglerComponent],
+  imports: [RouterLink, NavbarComponent, HamburgerComponent, AsideComponent],
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
