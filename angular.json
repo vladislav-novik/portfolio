@@ -47,9 +47,7 @@
                 "src"
               ]
             },
-            "scripts": [
-              "node_modules/aos/dist/aos.js"
-            ],
+            "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
