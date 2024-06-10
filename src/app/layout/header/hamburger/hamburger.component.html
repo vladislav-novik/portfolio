@@ -1,6 +1,6 @@
-<div tabindex="1" class="relative cursor-pointer z-30" (click)="opened.set(!opened())" (keyup.Space)="opened.set(!opened())">
-    <div class="line" [@first]="opened()"></div>
-    <div class="line" [@middle]="opened()"></div>
-    <div class="line" [@last]="opened()"></div>
-</div>
+<button class="relative cursor-pointer z-30" (click)="opened.set(!opened())">
+    <span class="line" [@first]="opened()"></span>
+    <span class="line" [@middle]="opened()"></span>
+    <span class="line" [@last]="opened()"></span>
+</button>
 
