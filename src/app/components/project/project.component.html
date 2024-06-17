@@ -1,4 +1,4 @@
-<div class="project" [class.project--left]="even()" [class.project--right]="!even()" appScrollAnimation>
+<div class="project" [class.project--left]="even()" [class.project--right]="!even()">
     <owl-carousel-o [options]="customOptions">
         @for(image of project().images; track image + i; let i = $index) {
             <ng-template carouselSlide [id]="project().Title + i">
@@ -13,7 +13,7 @@
         <div class="flex flex-col">
             <h4 class="mt-2 text-accent font-mono font-normal text-base dark:text-accent-dark">{{"FeatureProjects.Label" | translate}}</h4>
             <h5 class="text-blue my-3 text-5xl dark:text-gray">{{project().Title}}</h5>
-            <div class="rounded p-6 shadow-md bg-blue-lighter dark:bg-blue-light">
+            <div class="rounded z-10 p-6 shadow-md bg-blue-lighter dark:bg-blue-light">
                 <p class="text-lg" [innerHTML]="project().Description"></p>
             </div>
             <ul class="my-4 flex gap-x-4">

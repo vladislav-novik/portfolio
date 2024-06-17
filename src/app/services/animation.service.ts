@@ -16,11 +16,11 @@ export class AnimationService {
     gsap.registerPlugin(ScrollTrigger);
   }
 
-  fadeUp(el: HTMLElement) {
+  fadeUp(el: HTMLElement, text: string = '') {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: el,
-        start: 'top 90%',
+        start: 'top 80%',
         end: 'bottom bottom',
       },
     });
@@ -30,7 +30,7 @@ export class AnimationService {
         opacity: 0,
         y: 100,
       })
-      .to(el, { opacity: 1, y: 0, duration: 1 })
+      .to(el, { opacity: 1, y: 0, duration: 1 });
   }
 
   fadeRight(el: HTMLElement) {

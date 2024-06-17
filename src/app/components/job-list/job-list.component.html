@@ -1,20 +1,28 @@
-<div class="mt-4 flex gap-x-8" appScrollAnimation>
-    <ul
-        class="job-list nav-tabs mt-0"
-    >
-    @for (job of 'Experience.Jobs' | translate; track job.Tab; let idx = $index) {
-        <li
-            [class.active-job]="idx === active()"
-            class="cursor-pointer py-2 px-4 border-l-2 border-blue-lightest dark:border-gray
-            text-blue-darker transition-all duration-300 dark:text-blue-lighter
-            hover:text-accent hover:dark:text-accent-dark hover:bg-blue-lighter hover:dark:bg-blue-light" 
-            (click)="active.set(idx)"
-        >
-            <a class="text-base">{{ job.Tab }}</a>
-        </li>
-    }
-    </ul>
-    <div class="mt-2">
+<div class="mt-4 flex flex-col gap-y-2 md:flex-row md:gap-x-4">
+    <!-- Sidebar -->
+     <!-- bg-gray-100 dark:bg-gray-700  -->
+    <div class="w-full overflow-x-auto md:w-1/5">
+      <ul class="flex flex-row gap-x-4 md:flex-col md:gap-y-4">
+        @for (job of 'Experience.Jobs' | translate; track job.Tab; let idx = $index) {
+            <li
+                [class.active-job]="idx === active()"
+                class="cursor-pointer py-2 px-3 rounded-md flex justify-between items-center
+                bg-blue-lighter dark:bg-blue-light
+                text-blue-darker transition-all duration-300 dark:text-blue-lighter
+                hover:text-accent hover:dark:text-accent-dark hover:bg-white hover:dark:bg-blue-lightest" 
+                (click)="active.set(idx)"
+            >
+                <a class="text-lg">{{ job.Tab }}</a>
+                <span class="hidden font-mono text-2xl md:block">></span>
+            </li>
+        }
+      </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="bg-white dark:bg-blue-light shadow-md overflow-hidden rounded flex-1 mt-2 min-h-[40rem] md:min-h-[28rem] md:mt-0 md:rounded-lg">
+      <div class="p-4">
+        <!-- <p class="text-gray-700 dark:text-gray-300">This is the content of the macOS-like application window with a sidebar. You can add more elements here.</p> -->
         @for (job of 'Experience.Jobs' | translate; track job.Tab; let idx = $index) {
             @if (idx === active()) {
                 <div @jobListTrigger>
@@ -28,5 +36,6 @@
                 </div>
             }
         }
+      </div>
     </div>
-</div>
+  </div>

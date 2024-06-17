@@ -14,7 +14,7 @@ import { ScrollAnimationDirective } from '../../directives/scroll-animation.dire
     trigger('jobListTrigger', [
       transition(":enter", [
         style({ opacity: 0 }),
-        animate("350ms ease-in-out", style({ opacity: 1 }))
+        animate("500ms ease-in-out", style({ opacity: 1 }))
       ]),
     ],
   )]

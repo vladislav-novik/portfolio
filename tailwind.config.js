@@ -10,7 +10,22 @@ module.exports = {
   theme: {
     colors: {
       white: colors.white,
-      gray: "#f6f9fc",
+      yellow: colors.yellow,
+      red: colors.red,
+      green: colors.green,
+      gray: {
+        DEFAULT: "#f6f9fc",
+        50: colors.gray[50],
+        100: colors.gray[100],
+        200: colors.gray[200],
+        300: colors.gray[300],
+        400: colors.gray[400],
+        500: colors.gray[500],
+        600: colors.gray[600],
+        700: colors.gray[700],
+        800: colors.gray[800],
+        900: colors.gray[900],
+      },
       blue: {
         DEFAULT: "#0a2540",
         dark: "#06182c",
@@ -42,7 +57,8 @@ module.exports = {
         "lg": "432px",
       },
       fontFamily: {
-        'sans': ['Calibre', ...defaultTheme.fontFamily.sans],
+        // 'sans': ['Calibre', ...defaultTheme.fontFamily.sans],
+        'sans': [...defaultTheme.fontFamily.sans],
         'mono': ['"SF Mono"', ...defaultTheme.fontFamily.mono],
       },
     },
