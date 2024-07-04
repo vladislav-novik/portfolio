@@ -1,5 +1,6 @@
 .active-job {
-    @apply text-accent bg-white shadow dark:text-accent-dark dark:bg-blue-lightest;
+    // shadow
+    @apply text-accent bg-white  dark:text-accent-dark dark:bg-blue-lightest;
 }
 
 .description {

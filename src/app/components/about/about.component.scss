@@ -23,3 +23,40 @@
     }
 }
 
+.backdrop-filter {
+    backdrop-filter: blur(10px);
+    // background-color: rgba(255, 255, 255, 0.2);
+}
+
+.code-block {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.keyword {
+    color: #c678dd; /* Purple */
+}
+
+.variable {
+    color: #e5c07b; /* Yellow */
+}
+
+.operator {
+    color: #56b6c2; /* Cyan */
+}
+
+.string {
+    color: #98c379; /* Green */
+}
+
+.function {
+    color: #61afef; /* Blue */
+}
+
+.comment {
+    color: #5c6370; /* Gray */
+    font-style: italic;
+}
+
+#static-code {
+    white-space-collapse: preserve;
+}

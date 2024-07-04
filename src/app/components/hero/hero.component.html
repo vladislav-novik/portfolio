@@ -1,7 +1,7 @@
-<section class="h-lvh" id="hero">
+<section id="hero">
     <!-- [@bannerTrigger] -->
-    <div class="h-full flex items-center">
-        <div>
+    <div class="pt-2 pb-40 md:py-40 md:relative ">
+        <div [@bannerTrigger] class="">
             <div>
                 <h1 class="font-mono text-accent text-base dark:text-accent-dark">{{"Banner.Pretitle" | translate}}</h1>
                 <h2 class="text-blue text-5xl font-semibold leading-snug dark:text-white">José Hernández.</h2>
@@ -12,6 +12,50 @@
                 <a href="mailto:andresjosehr@gmail.com" target="_black" class="main-btn">
                     {{"Banner.ActionBtn" | translate}}
                 </a>
+            </div>
+        </div>
+        <div class="md:max-w-3xl">
+            <div class="md:absolute md:w-1/2 md:top-0 md:bottom-0 md:right-0">
+                <div class="relative md:h-full max-w-[none] md:pl-24 -mr-40">
+                    <div class="rounded h-[674px] w-[1000px] bg-blue-darker">
+                        <section class="bg-gray-100 flex flex-col items-center justify-center min-h-screen relative">
+
+                            <div class="bg-gray-200 rounded-lg shadow-lg overflow-hidden w-11/12 max-w-4xl my-8">
+                                <div class="bg-gray-300 p-2 flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                </div>
+                                <div class="bg-gray-800 text-white">
+                                    <div class="max-w-4xl mx-auto py-8 px-4">
+                                        <div class="bg-gray-800 p-4 rounded-md shadow-md code-block">
+                                            <!-- [innerHTML]="stripe" -->
+                                            
+                                            <code>
+                                                <pre>
+                                                    <!-- class="whitespace-pre" -->
+                                <span  id="static-code"></span><span id="animated-code"></span><span class="cursor">|</span>
+                                                </pre>
+                                            </code>
+                                        </div>
+                                
+                                        <div class="mt-8 bg-gray-800 p-4 rounded-md shadow-md">
+                                            <div class="font-bold mb-2">NORMAL</div>
+                                            <div class="bg-black p-4 rounded-md">
+                                                <p>$ node server.js && stripe listen</p>
+                                                <p>&gt; Ready! Waiting for requests...</p>
+                                                <p class="text-green-400">2024-06-00 21:36:39 [200] payment_intent.created</p>
+                                                <p class="text-green-400">2024-06-00 21:36:40 [200] charge.succeeded</p>
+                                                <p class="text-green-400">2024-06-00 21:36:40 [200] payment_intent.succeeded</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </section>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

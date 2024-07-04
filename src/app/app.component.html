@@ -1,4 +1,4 @@
-@defer {
+<!-- @defer {
     <app-header></app-header>
 }
 
@@ -6,4 +6,15 @@
 
 @defer {
     <app-footer></app-footer>
+} -->
+
+@defer {
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+}
+@loading (minimum 1s) {
+    <div class="flex items-center justify-center h-screen">
+        <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+    </div>
 }
